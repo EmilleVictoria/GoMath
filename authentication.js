@@ -79,6 +79,6 @@ function logInComGoogle(){
 function logout () {
     firebase.auth().signOut();
     alert("Signed Out");
-    window.location.href='/autenticacao/index.html';
+    window.location.href='/index.html';
 }
 
