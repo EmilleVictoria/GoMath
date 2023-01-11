@@ -6,33 +6,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
    <script src="/authentication.js"></script>
-   
+   <script src="https://kit.fontawesome.com/79b0962156.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/Dashboard/css/simple-grid.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 
 </head>
 <body>
         
         <div class="row">
-            <div class="col-3">
+            <div class="col-2">
                 <div class="logo">
-                    <a class="retornar" type="button" href="dashboard.html"></a>
-                    
+                    <a style="text-decoration: none;" href="dashboard.html">
+                        <h3><i style="color:black "class="fa-solid fa-cube fa-2x"> </i> GoMath</h3></a>
                 </div>  
-                <div class="menu">                
-                <div class="vertical-menu"><a href="#" class="active">Dashboard</a></div>
-                <div class="vertical-menu"><a href="/Materiais/materiais.html">Materiais</a></div>
-                <div class="vertical-menu"><a href="/Simulado/simulados.html">Simulado</a></div>
-                <div class="vertical-menu"><a href="/SobreNos/sobreNos.html">Sobre Nós</a></div>
-                <div class="vertical-menu"><a href="/Exercicios/exercicios.html">Exercícios</a></div>
+
+                <div class="menu"> 
+
+                <div class="vertical-menu">
+                    <a href="#" class="active">
+                        <i style="color:white"class="fa-solid fa-shapes"></i> Dashboard</a>
+                </div>
+
+                <div class="vertical-menu">
+                    <a href="/Materiais/materiais.html">
+                        <i style="color:black"class="fa-solid fa-file-import"></i>  Materiais</a>
+                </div>
+
+                <div class="vertical-menu">
+                    <a href="/Simulado/simulados.html">
+                        <i style="color:black"class="fa-solid fa-book"></i> Simulado</a>
+                </div>
+
+                <div class="vertical-menu">
+                    <a href="/Exercicios/exercicios.html">
+                        <i style="color:black"class="fa-solid fa-file"></i> Exercícios</a>
+                </div>
+
+                <div class="vertical-menu">
+                    <a href="/Exercicios/exercicios.html">
+                        <i style="color:black"class="fa-solid fa-users-rectangle"></i> Aulas</a>
+                        
+                </div>
+
+
+                <div class="vertical-menu">
+                    <a href="/SobreNos/sobreNos.html">
+                        <i style="color:black"class="fa-solid fa-person"></i> Sobre Nós</a>
+                </div>
 
                 <button class="logout" id="logout" onclick="logout()">LogOut</button> 
                 </div>
             </div>
-            <div class="col-6">
-                <div><h1 class="bemvindo">Bem vindo!</h1></div>
-                <div class="home">Em andamento...</div>
+            <div class="col-7">
+                <div><h1 class="bemvindo">Bem vindo, fulano.</h1></div>
+                <div><p class="dia">Tenha um ótimo dia!</p></div>
+                <div class="video">
+                    <iframe width="70%" height="300" src="https://www.youtube.com/embed/Li9fUNibVlw?autoplay=1&mute=1" title="SEJA BEM VINDO EFEITO LINHAS BACKGROUND FULL HD #Mczprints 🇧🇷" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div>
+                    <h3 style="margin-left: 10px;">Histórico</h3>
+                </div>
+                <div class="historico">
+                    <div class="row">
+                        <div class="col-1 ultimoSimu"></div>
+                        <div class="col-5 continuar">
+                            <p>Continuar assistindo...</p>
+                            <div class="historicocard" id="videocard">
+                                <a type="button" href="#">
+                                    <i style="color:white"class="fa-solid fa-play fa-3x"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-5 ultimoSimu"><p>Ultimo simulado.</p>
+                            <div class="historicocard">
+
+                                <div>
+                                    <a type="button" href="#">
+                                        <i style="color:white"class="fa-solid fa-pen fa-3x"></i>
+                                    </a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col-1 ultimoSimu"></div>
+
+                    </div>
+                    
+                </div>
+                
             </div>
             <div class="col-3">
                 <div><h1 class="bemvindo">Desempenho</h1></div>

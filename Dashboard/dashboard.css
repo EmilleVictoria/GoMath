@@ -1,5 +1,5 @@
 .vertical-menu {
-    width: 200px; /* Set a width if you like */
+    width: 100%; /* Set a width if you like */
   }
   .home{
     height:70vh; 
@@ -8,7 +8,8 @@
     height: 70vh;
   }
   .logo{
-    margin-bottom: 70px;
+    text-decoration: none; /* Remove underline from links */
+
   }
   .vertical-menu a {
     background-color: #eee; /* Grey background color */
@@ -47,12 +48,86 @@
     
   }
   .bemvindo{
-    margin-top: 0;
+    margin-top: 10px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 36px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+
   }
+  .dia{
+    margin-top: 5px;
+    margin-left:10px;
+    font-size: 20px;
+  }
+  
   .retornar{
     content: url("https://cdn-icons-png.flaticon.com/512/46/46932.png");
-    width: 30px;
+    width: 40px;
     position: absolute; 
-	left: 20px; /* posiciona a 90px para a esquerda */ 
-	top: 30px; /* posiciona a 70px para baixo */
+    left: 20px; /* posiciona a 90px para a esquerda */ 
+    top: 30px; /* posiciona a 70px para baixo */
+}
+iframe{
+border-radius: 15px;
+}
+.col-7{
+  background-color: rgb(253, 252, 252);
+  
+}
+.video{
+  text-align: center;
+  
+}
+.historico{
+  text-align: center;
+}
+
+.continuar{
+  text-align: center;
+}
+.ultimoSimu{
+  
+}
+.col-5{
+  border-style: solid;
+  border-top-width: 7px;
+  border-color: #00f;
+  border-bottom-width:thin;
+  border-right-width:thin;
+  border-left-width:thin;
+  background-color: white;
+  border-radius: 15px;
+  color: black;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 30px;
+  /* identical to box height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.historicocard{
+  color:black;
+  background-color:#E56F8C;
+
+  width: 80%;
+  height: 20vh; 
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: 10px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#videocard{
+  background-color:#E56F8C;
 }
