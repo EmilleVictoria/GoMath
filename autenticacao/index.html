@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>   
+
+<script src="authentication.js"></script>
+
+<body>
+<!--<link >-->
+    <div class="container">
+        <!--Tela Cadastro-->
+        <div class="content TelaCadastro">
+            <div class="primeira-coluna">
+                <h2 class="titulo primeiro-titulo">Bem vindo!</h2>
+                <p class="descricao primeira-descricao">Já possue uma conta? Acesse agora mesmo!</p>
+                <!--<a type="button" id="entrar" class="botao primeiro-botao" href="index.html">Entrar</a> (antiga class="cadastrar")-->
+                <button id="entrar" class="botao primeiro-botao">Entrar</button>
+            </div>  
+            <div class="segunda-coluna">
+                <h2 class="titulo segundo-titulo">Faça seu cadastro</h2>
+                <form class="form">
+                    <label class="label-input" for="">
+                        <i class="far fa-user icon-modify"></i>
+                        <input type="text" placeholder="Name" name="name" id="Name">
+                    </label>
+                    
+                    <label class="label-input" for="">
+                        <i class="far fa-envelope icon-modify"></i>
+                        <input class="input-email" type="email" name="email" placeholder="Email" id="Email">
+                    </label>
+                    
+                    <label class="label-input" for="">
+                        <i class="fas fa-lock icon-modify"></i>
+                        <input class="input-senha" type="password" name="senha" placeholder="Password" id="Password">
+                    </label>
+                    
+                    
+                    <button type="button" class="botao segundo-botao" id="botaoLogin" onClick=" cadastrar()">Cadastrar</button> <!--antiga class login-->       
+                </form>
+            </div>
+        </div>
+        <!--Fim TelaCadastro-->
+
+        <!--TelaLogin-->
+        <div class="content TelaLogin">
+            <div class="primeira-coluna">
+                <h2 class="titulo primeiro-titulo">Faça seu login!
+                <p class="descricao primeira-descricao">Não possue conta?</p>
+                <p class="descricao primeira-descricao">Crie uma agora mesmo!</p>
+                <button id="cadastrar" class="botao primeiro-botao">Cadastrar</button>
+            <!-- <a id="cadastrar" type="button" class="botao primeiro-botao" href="cadastrar.html"> Cadastrar</a> (Antiga class cadastrar)-->
+            </div>
+            <div class="segunda-coluna">
+                <h2 class="titulo segundo-titulo">Faça seu Login!</h2>                 
+                    <div>
+                        <button class="login" onclick="logInComGoogle()">Login com Google</button>
+                    </div>
+                        <!--
+                            <a href="#" class="login100-social-item bg3">
+                            <i class="fa fa-google"></i>
+                            </a>
+                        -->
+                        
+                <form class="form">
+                    <!--CampoEmail-->
+                    <label class="label-input" for="">
+                        <i class="far fa-envelope icon-modify"></i>
+                        <input class ="input-email" type="email" name="email" placeholder="Email" id="inputEmail">
+                    </label>
+                
+                    <label class="label-input" for="">
+                        <i class="fas fa-lock icon-modify"></i>
+                        <input class="input-senha" type="password" name="senha" placeholder="Password" id="inputSenha">
+                    </label>
+                    <button type="button" class="botao segundo-botao" id="botaoLogin" onclick="login()">Login</button>
+                    <a type="button" class="recuperar" href="recuperarSenha.html">Recuperar senha</a>
+                </form>
+            </div>
+        </div>
+        <!--Fim TelaLogin-->
+</div>
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-auth-compat.js"></script>
+<script src="/config.js"></script>
+<script src="js/app.js"></script>
+
+
+</html> 
