@@ -1,0 +1,51 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Recuperar Senha</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>    
+<script src="/authentication.js"></script>
+<body>
+<link >
+
+<div class="container">
+    <div class="content TelaCadastro">
+        <div class="primeira-coluna">
+            <a class="retornar" type="button" href="index.html"></a>
+            <h2 class="titulo primeiro-titulo">Recupere sua senha!</h2>
+            <p class="descricao primeira-descricao">Ao clicar em "recuperar", enviaremos um código de recuperação. Verifique o seu SPAM.</p>
+            
+        </div>  
+        <div class="segunda-coluna">
+            <h2 class="titulo segundo-titulo">Recuperar senha</h2>
+            <p class="descricao primeira-descricao">Digite o seu email</p>
+
+            <form class="form">
+                
+                <label class="label-input" for="">
+                    <i class="far fa-envelope icon-modify"></i>
+                    <input class="input-email" type="text" name="email" placeholder="E-mail" id="Email">
+                </label>
+                <button type="button" class="botao segundo-botao" id="botaoLogin" onclick="recoverPassword()">Recuperar</button>
+
+            </form>
+
+        </div>
+    </div>
+
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-auth-compat.js"></script>
+<script src="authentication.js"></script>
+<script src="/config.js"></script>
+
+
+</html>
