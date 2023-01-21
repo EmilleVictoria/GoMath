@@ -1,5 +1,3 @@
-
-
 //funcao de login
 function login() {
   
@@ -106,5 +104,4 @@ function login() {
     alert("Signed Out");
     window.location.href='/index.html';
  }
- 
  
