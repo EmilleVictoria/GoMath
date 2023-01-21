@@ -1,0 +1,92 @@
+
+/*Coluna 2 (col-8) - "meio" */
+
+/*Video*/
+  .col-8{
+    background-color: rgb(248, 244, 244);
+  }
+
+ .bemvindo{
+    margin-top: 10px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 36px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+
+  }
+  .dia{
+    margin-top: 5px;
+    margin-left:10px;
+    font-size: 20px;
+  }
+  .video{
+    text-align: center;
+    
+  }
+  iframe{
+    border-radius: 15px;
+  }
+
+/*Historico */
+
+  .historico{
+    text-align: center;
+  }
+
+.continuar{
+  text-align: center;
+}
+.historicocard{
+  color:black;
+  background-color:#82aaf3;
+
+  width: 80%;
+  height: 20vh; 
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: 10px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#videocard{
+  background-color:#e84141;
+}
+
+.col-5{
+  border-style: solid;
+  border-top-width: 7px;
+  border-color: #00f;
+  border-bottom-width:thin;
+  border-right-width:thin;
+  border-left-width:thin;
+  background-color: white;
+  border-radius: 15px;
+  color: black;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 30px;
+  /* identical to box height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Coluna  (col-2) - "desempenho" */
+.desempenho{
+  }
+
+
+
+
+
+
+
+

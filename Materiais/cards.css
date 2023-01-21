@@ -1,0 +1,129 @@
+/*Historico */
+.col-8{
+  background-color: rgb(248, 244, 244);
+}
+.bemvindo{
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 32px;
+text-align: center;
+
+color: #000000;
+}
+.col-4{   /*col-5*/
+    background-color: rgb(248, 244, 244);
+ 
+}
+.historicocard{
+  color:black;
+
+  width: 80%;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:#82aaf3;
+
+
+  width: 80%;
+  height: 50%;
+  border-radius: 8px;
+  margin: 0 auto;
+  margin-bottom: 5px;
+}
+
+
+.historico{
+  text-align: center;
+}
+.card{    /*col-5*/
+  background-color: white;
+  margin:10px;
+  height: 20vh;
+  border-style: solid;
+  border-top-width: 7px;
+  border-color: #00f;
+  border-bottom-width:thin;
+  border-right-width:thin;
+  border-left-width:thin;
+  border-radius: 15px;
+  color: black;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 30px;
+  
+    /*centralizar
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  */
+}
+.botao{
+    background-color: #00f;
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    align-self: center;
+    border: none;
+    margin-top: 5px;
+    width: 80%;
+    height: 20%;
+    font-family: 'Poppins';
+}
+
+/*
+.continuar{
+text-align: center;
+}
+
+.historicocard{
+color:black;
+background-color:#82aaf3;
+
+width: 80%;
+height: 20vh; 
+margin-top: 20px;
+margin-bottom: 20px;
+margin-left: auto;
+margin-right: 10px;
+border-radius: 15px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+#videocard{
+background-color:#e84141;
+}
+
+.col-5{
+border-style: solid;
+border-top-width: 7px;
+border-color: #00f;
+border-bottom-width:thin;
+border-right-width:thin;
+border-left-width:thin;
+background-color: white;
+border-radius: 15px;
+color: black;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 300;
+font-size: 15px;
+line-height: 30px;
+
+identical to box height
+
+display: flex;
+justify-content: center;
+align-items: center;
+}
+*/
