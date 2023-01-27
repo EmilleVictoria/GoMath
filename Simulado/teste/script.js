@@ -1,14 +1,50 @@
 //so iniciando
-const question = document.querySelector(".question");
-const answers = document.querySelector(".answers");
-const spnQtd = document.querySelector(".spnQtd");
-const textFinish = document.querySelector(".finish span");
-const content = document.querySelector(".content");
+//const question = document.querySelector(".question");
+//const answers = document.querySelector(".answers");
+//const spnQtd = document.querySelector(".spnQtd");
+//const textFinish = document.querySelector(".finish span");
+//const content = document.querySelector(".content");
 const contentFinish = document.querySelector(".finish");
 const btnRestart = document.querySelector(".finish button");
 
 //importando as questoes do simulado1
-import questions from "./questions.js";
+//import questions from "./questions.js";
+//const dbRef = firebase.database().ref();
+//const questoes = dbRef.child("Quetoes").child().get();
+//import questions from 'https://ppo-gomath-default-rtdb.firebaseio.com';
+var questions; 
+
+function importar (questions){
+  
+  const dbRef = firebase.database().ref();
+  
+  dbRef.child("users").child(userId).get().then((snapshot) => {
+    if (snapshot.exists()) {
+      questions.push(snapshot.val());
+  
+  
+    } else {
+      console.log("No data available");
+  
+    }
+  
+  }).catch((error) => {
+    console.error(error);
+  
+  });
+        ref.get('value', (snapshot) => {
+          snapshot.forEach((childSnapshot) => {
+            var enunciado = childSnapshot.enunciado.val();
+            var alt1 = hildSnapshot.alt1.val();
+            var alt2 = hildSnapshot.alt2.val();
+            var alt3 = hildSnapshot.alt3.val();
+            var alt4 = hildSnapshot.alt4.val();
+            var correta = hildSnapshot.correta.val();
+          });
+        })
+
+        
+        };
 
 //indice da questao atual
 let currentIndex = 0;
@@ -35,17 +71,6 @@ function nextQuestion(e) {
     questionsCorrect++;
   }
 
-<<<<<<< HEAD
-=======
-  function nextQuestion(e) {
-    //verifica se a questao está certa
-  if (e.target.getAttribute("data-correct") === "true") {
-    //incrementa o numero de respostas certas
-    questionsCorrect++;
-  }
-
-
->>>>>>> 1c5eb63 (adicionando simulados e pegando questoes do bd)
   //passa para a proxima questao de fato
   if (currentIndex < questions.length - 1) {
     currentIndex++;
@@ -56,11 +81,7 @@ function nextQuestion(e) {
     finish();
   }
 }
-<<<<<<< HEAD
 
-=======
-}
->>>>>>> 1c5eb63 (adicionando simulados e pegando questoes do bd)
 //texto que sai no final, dps de responder tudo
 function finish() {
   textFinish.innerHTML = `você acertou ${questionsCorrect} de ${questions.length}`;
