@@ -1,0 +1,57 @@
+/*Coluna 1 (col-2) - Nav */
+.logo{
+    text-decoration: none; /* Remove underline from links */
+  
+  }
+  .logo{
+    display: flex;
+  }
+  .colunas{
+    flex-direction: row;
+  }
+  .simbolo{
+    width: 197px;
+  }
+  .user{
+    width: 197px;
+  
+  }
+  .usersimbolo{
+      position: absolute;
+      right: 20px;
+      top: 15px;
+  }
+  .menu{
+    height: 70vh;
+  }
+  .vertical-menu {
+    width: 100%; /* Set a width if you like */
+  }
+  
+  .vertical-menu a {
+    background-color: #eee; /* Grey background color */
+    color: black; /* Black text color */
+    display: block; /* Make the links appear below each other */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove underline from links */
+    margin-top: 10px;
+    background-color: transparent;
+    border-radius: 5px;
+  
+  }
+  
+  .vertical-menu a:hover {
+    background-color: #3649f9; /* Dark grey background on mouse-over */
+    color: white;
+  }
+  
+  .vertical-menu a.active {
+    background-color: #3649f9; /* Add a green color to the "active/current" link */
+    color: white;
+  }
+  #logout{
+    margin-top: 110px;
+    cursor: pointer;
+  }
+ 
+  
