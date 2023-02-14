@@ -1,0 +1,135 @@
+
+* {
+  
+    font-family: "Poppins", sans-serif;
+  }
+  a{
+    color:white; 
+    text-decoration: none;
+  }
+  .col-6{
+    align-items: center;
+  }
+.titulo{
+  display: flex;
+}
+.tituloassunto{
+  text-align: center;
+}
+
+H2 { 
+  text-align: center; 
+  }
+
+  .col-8{
+    background: #F6F9FF;
+  }
+  
+  .corpo {
+    background: #F6F9FF;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #434343;
+    font-size: 16px;
+  }
+  
+  
+  main.cards {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  
+  }
+  
+  main.cards section.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: white;
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    border-style: solid;
+    border-top-width: 5px;
+    border-color: #00f;
+    border-bottom-width:thin;
+    border-right-width:thin;
+    border-left-width:thin;
+  }
+  
+  main.cards section.card:first-child {
+    margin-left: 0;
+  }
+  
+  
+  main.cards section.card .icon {
+    width: 70px;
+    height: 70px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  
+  main.cards section.card img {
+    width: 80%;
+  }
+  #modular{
+    width: 85%;
+  }
+  
+  main.cards section.card h3 {
+    font-size: 100%;
+    margin: 2px 0;
+    
+  }
+  
+  
+  
+  main.cards section.card button {
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    border-radius: 32px;
+    border: 0;
+    cursor: pointer;
+    font-size: 80%;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 5px 0;
+    
+  }
+  
+  
+  main.cards section.card.assunto button {
+    background: linear-gradient(to right, #0865f0, #55a4ed);
+  }
+  
+  main.cards section.card.assunto {
+    box-shadow: 20px 20px 50px -30px #AFD6FF;
+  }
+  
+  
+  @media screen and (max-width: 720px) {
+    main.cards {
+        flex-direction: column;
+    }
+    
+    main.cards section.card {
+        margin-left: 0;
+        margin-bottom: 32px;
+    }
+  
+    main.cards section.card:last-child {
+        margin-bottom: 0;
+    }
+  
+    main.cards section.card button {
+        font-size: 70%;
+    }
+    .col-8{
+      padding-top: 50px;
+    }
+  
+  }
