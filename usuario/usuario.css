@@ -1,0 +1,55 @@
+/*
+.formulario{
+    border-radius: 20px;
+    background-color: azure;
+    text-align: center;
+}
+.dados{
+    background-color: antiquewhite;
+    margin: 10px;
+}
+
+.col-8{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(45deg, cyan, yellow);
+}
+*/
+.col-10{
+    background-color: #6d7af0;
+}
+p{
+    
+    margin-bottom: 0%;
+}
+.tela{
+    background-color: rgba(255, 255, 255, 0.358);    
+    top: 50%;
+    left: 50%;
+    margin: 50px;
+    padding: 80px;
+    border-radius: 15px;
+    color: #fff;
+}
+input{
+    padding: 15px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+button{
+    background-color: #6d7af0;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    
+}
+button:hover{
+    background-color: rgb(29, 163, 207);
+    cursor: pointer;
+    
+}
