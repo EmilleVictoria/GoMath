@@ -35,17 +35,6 @@ function nextQuestion(e) {
     questionsCorrect++;
   }
 
-<<<<<<< HEAD
-=======
-  function nextQuestion(e) {
-    //verifica se a questao está certa
-  if (e.target.getAttribute("data-correct") === "true") {
-    //incrementa o numero de respostas certas
-    questionsCorrect++;
-  }
-
-
->>>>>>> 1c5eb63 (adicionando simulados e pegando questoes do bd)
   //passa para a proxima questao de fato
   if (currentIndex < questions.length - 1) {
     currentIndex++;
@@ -56,11 +45,6 @@ function nextQuestion(e) {
     finish();
   }
 }
-<<<<<<< HEAD
-
-=======
-}
->>>>>>> 1c5eb63 (adicionando simulados e pegando questoes do bd)
 //texto que sai no final, dps de responder tudo
 function finish() {
   textFinish.innerHTML = `você acertou ${questionsCorrect} de ${questions.length}`;

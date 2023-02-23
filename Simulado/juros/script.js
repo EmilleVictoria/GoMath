@@ -107,11 +107,20 @@ btnRestart.onclick = () => {
 
 function nextQuestion(e) {
     //verifica se a questao está certa
-  if (e.target.getAttribute("data-correct") === "true") {
+
+     if (e.target.getAttribute("data-correct") === "true") {
     //incrementa o numero de respostas certas
     questionsCorrect++;
-  }
+    
+    firebase.database().ref('users/' + firebase.auth().currentUser.uid+"/certas").set(questions[currentIndex])  }
+    
+    else{
+    console.log(questions[currentIndex])
+   
+    firebase.database().ref('users/' + firebase.auth().currentUser.uid+"/erradas").set(questions[currentIndex])
+  
 
+    }
     
 
   //passa para a proxima questao de fato
