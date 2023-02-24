@@ -1,6 +1,6 @@
 //funcao de login
 function login() {
-  
+    listener();
     let email = document.getElementById("inputEmail").value;
     let senha = document.getElementById("inputSenha").value;
     let admin = null;
@@ -16,6 +16,7 @@ function login() {
         document.getElementById("inputEmail").value, document.getElementById("inputSenha").value
     ).then(response => {
          console.log("LogIn efetuado com sucesso!");
+        
          if (admin == false){
             //manda para Dashboard
             window.location.href='/Dashboard/dashboard.html';
@@ -23,7 +24,7 @@ function login() {
             window.location.href='/criarSimulado/index.html';
          }
  
- 
+         listener();
     }).catch(error => {
         alert(getErrorMessage(error));
     });
@@ -32,9 +33,13 @@ function login() {
  
  
  
- 
- 
+
+
+
  function getErrorMessage(error) {
+    //let msgSenhaIncorreta = "FirebaseError: Firebase: The password is invalid or the user does not have a password. (auth/wrong-password).";
+    //por algum motivo, a manipulacao desse erro nao está funcionando.
+
     if (error.code == "auth/user-not-found") {
         //serve como uma traducao
         return "Usuário nao encontrado";
@@ -43,9 +48,10 @@ function login() {
         //mesmo preenchendo o formulario, dizia no console que tinham sido informada
         //variaveis nulas
         //mas, mesmo assim, no firebase ficava cadastrado
-        return "Cadastro efetuado com sucesso!";
+        return error;
     }
- 
+    
+   
  
     return error.message;
  }
@@ -62,11 +68,12 @@ function login() {
         //isso precisa ser mudado
         window.location.href = '/Dashboard/dashboard.html';
    
-   
+        listener();
     }).catch(error => {
         alert(getErrorMessage(error));
     });
  }
+ 
  
  
  //serve para a recuperacao de senha
@@ -96,6 +103,7 @@ function login() {
             alert("Erro ao logar! ");
             console.log(err)
         });
+        listener();
  }
  
  
@@ -103,5 +111,19 @@ function login() {
     firebase.auth().signOut();
     alert("Signed Out");
     window.location.href='/index.html';
+    listener();
  }
  
+ function listener (){
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+        // User is signed in.
+        var userId = firebase.auth().currentUser;
+        console.log(userId)
+        } else {
+        console.log("Faça Login")
+        }
+  });}
+
+  listener();
+  

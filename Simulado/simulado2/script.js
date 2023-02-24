@@ -58,13 +58,32 @@ var questions_temp = {
           }
         }console.log(questions[0].alt1);
   
+        questions = embaralhar(questions);
+        questions = questions.slice(-10)
+        
         document.getElementById("loaderDiv").style.display = "none";
       });
   }
 
 
 
-
+  function embaralhar (questions){
+    //just inicializando
+    var i = questions.length
+    var j = 0;
+    var temp;
+  //vai decrementando in each looṕ
+   while (--i > 0){
+      j = Math.floor(Math.random() * (i+1));
+      //salva para depois depois usar
+      temp =  questions[j];
+        questions[j] =   questions[i];
+        questions[i] = temp;
+      //agora, ele trocou a posicao i com a j e vai seguindo
+    }
+    //returns the suffled array
+    return  questions;
+  }
 
 
 //ainda a trabalhar

@@ -18,7 +18,7 @@ var questions_temp = {
     alt3: "",
     alt4: "",
 };
-
+var embaralhadas = [];
 
 
 
@@ -28,13 +28,13 @@ var questions_temp = {
     .database()
       .ref("juros")
       .once("value", function (data) {
-        //once means,run this function only once. value refers to => Run this function when the value is updated. data=>received data from database
+        //once means,run  questions function only once. value refers to => Run  questions function when the value is updated. data=>received data from database
         var data = data.val();
         let qNum = 0;
         for (var property in data) {
-          //run this loop as long as the data has some property
+          //run   questions loop as long as the data has some property
           if (data.hasOwnProperty(property)) {
-            //check if this is its own proeprty
+            //check if  questions is its own proeprty
             questions[qNum] =
               //create objects inside new question
               {
@@ -57,12 +57,30 @@ var questions_temp = {
             qNum++;
           }
         }console.log(questions[0].alt1);
-  
+        questions = embaralhar(questions);
+        questions = questions.slice(-10)
+        console.log(questions[0].alt1);
         document.getElementById("loaderDiv").style.display = "none";
-      });
+        
+      })}
+
+function embaralhar (questions){
+  //just inicializando
+  var i = questions.length
+  var j = 0;
+  var temp;
+//vai decrementando in each looṕ
+ while (--i > 0){
+    j = Math.floor(Math.random() * (i+1));
+    //salva para depois depois usar
+    temp =  questions[j];
+      questions[j] =   questions[i];
+      questions[i] = temp;
+    //agora, ele trocou a posicao i com a j e vai seguindo
   }
-
-
+  //returns the suffled array
+  return  questions;
+}
 
 
 
@@ -89,11 +107,20 @@ btnRestart.onclick = () => {
 
 function nextQuestion(e) {
     //verifica se a questao está certa
-  if (e.target.getAttribute("data-correct") === "true") {
+
+     if (e.target.getAttribute("data-correct") === "true") {
     //incrementa o numero de respostas certas
     questionsCorrect++;
-  }
+    
+    firebase.database().ref('users/' + firebase.auth().currentUser.uid+"/certas").set(questions[currentIndex])  }
+    
+    else{
+    console.log(questions[currentIndex])
+   
+    firebase.database().ref('users/' + firebase.auth().currentUser.uid+"/erradas").set(questions[currentIndex])
+  
 
+    }
     
 
   //passa para a proxima questao de fato
