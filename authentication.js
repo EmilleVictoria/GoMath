@@ -119,12 +119,7 @@ function login() {
         if (user) {
         // User is signed in.
         var userId = firebase.auth().currentUser;
-        var email = userId.email;
-        var nome = userId.displayName;
-        console.log(email)
-        console.log(nome)
         console.log(userId)
-        
         } else {
         console.log("Faça Login")
         }

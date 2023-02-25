@@ -190,6 +190,7 @@ return false;
 
 function loadQuestion() {
 
+
 //Ele vai mostrar tipo "3/4" 
 spnQtd.innerHTML = `${currentIndex + 1}/${questions.length}`;
 //item pega a questao do indice atual
@@ -235,6 +236,54 @@ answers.appendChild(div);
 document.querySelectorAll(".answer").forEach((item) => {
 item.addEventListener("click", nextQuestion);
 });
+
+  
+    //Ele vai mostrar tipo "3/4" 
+  spnQtd.innerHTML = `${currentIndex + 1}/${questions.length}`;
+  //item pega a questao do indice atual
+  const item = questions[currentIndex];
+  console.log(item.correta);
+  answers.innerHTML = "";
+  //joga ele para a tela
+  question.innerHTML = item.enunciado;
+  
+
+  //para cada alternativa
+  //cria uma div com o enunciado dela
+
+    
+    const div = document.createElement("div");
+    //ao clicar na div, a questao e respondida
+    //analisar depois se e preciso mudar
+    div.innerHTML = `
+    <button class="answer" data-correct="${iscorrect(item.alt1, item.correta)}">
+      ${item.alt1}
+    </button>
+    <button class="answer" data-correct="${iscorrect(item.alt2, item.correta)}}">
+      ${item.alt2}
+    </button>
+    <button class="answer" data-correct="${iscorrect(item.alt3, item.correta)}">
+      ${item.alt3}
+    </button>
+    <button class="answer" data-correct="${iscorrect(item.alt4, item.correta)}">
+      ${item.alt4}
+    </button>
+    `;
+    //para esclarecer, option e o textinho
+    //correct e o boolean usado para verificar se a alternativa e certa ou nao
+
+    //atribui dentro da div essas informacoes (enunciado, correta)
+    //correta - certa ou nao
+    answers.appendChild(div);
+
+
+  
+
+  //sempre que clicar na div da questao faz todo o processo
+  document.querySelectorAll(".answer").forEach((item) => {
+    item.addEventListener("click", nextQuestion);
+  });
+
 }
 
 //logo ao abrir o documento, ja vai estar mostrando a primeira questao

@@ -18,8 +18,12 @@ var questions_temp = {
     alt3: "",
     alt4: "",
 };
+<<<<<<< HEAD
 var erradas = [];
 var certas = [];
+=======
+
+>>>>>>> 4fd8487e80c14d6114dcdc1585232459b0f0446d
 
 
 
