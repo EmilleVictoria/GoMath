@@ -1,0 +1,29 @@
+.tituloAula{
+    text-align: center; 
+    color: #3649f9;
+}
+.checkbox{ 
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    border-style: solid;
+    border-top-width: 3px;
+    border-color: #00f;
+    border-bottom-width:3px;
+    border-right-width:3px;
+    border-left-width:3px;
+    width: 70px;
+    margin: auto;
+    display: block;
+
+}
+input[type=checkbox]{
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-color:#1E80EF;
+    cursor: pointer;
+        
+}
+
+

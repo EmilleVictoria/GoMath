@@ -1,0 +1,250 @@
+* {
+  
+  font-family: "Poppins", sans-serif;
+}
+a{
+  color:white; 
+  text-decoration: none;
+}
+.col-8{
+  background: #F6F9FF;
+}
+
+.corpo {
+  background: #F6F9FF;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #434343;
+  font-size: 16px;
+}
+
+
+main.cards {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+
+}
+
+main.cards section.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  border-style: solid;
+  border-top-width: 5px;
+  border-color: #00f;
+  border-bottom-width:thin;
+  border-right-width:thin;
+  border-left-width:thin;
+
+}
+
+main.cards section.card:first-child {
+  margin-left: 0;
+}
+
+
+main.cards section.card .icon {
+  width: 70px;
+  height: 70px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+main.cards section.card img {
+  width: 100%;
+}
+
+main.cards section.card h3 {
+  font-size: 100%;
+  margin: 2px 0;
+}
+
+
+
+main.cards section.card button {
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  border-radius: 32px;
+  border: 0;
+  cursor: pointer;
+  font-size: 80%;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 5px 0;
+}
+
+
+main.cards section.card.assunto button {
+  background: linear-gradient(to right, #3181fa, #b3d9fd);
+}
+
+main.cards section.card.assunto {
+  box-shadow: 20px 20px 50px -30px #AFD6FF;
+}
+
+
+@media screen and (max-width: 720px) {
+  main.cards {
+      flex-direction: column;
+  }
+  
+  main.cards section.card {
+      margin-left: 0;
+      margin-bottom: 32px;
+  }
+
+  main.cards section.card:last-child {
+      margin-bottom: 0;
+  }
+
+  main.cards section.card button {
+      font-size: 70%;
+  }
+  .col-8{
+    padding-top: 50px;
+  }
+
+}
+
+
+
+
+/*Historico
+.col-8{
+  background-color: rgb(248, 244, 244);
+}
+.bemvindo{
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 32px;
+text-align: center;
+
+color: #000000;
+}
+.col-4{   /*col-5
+    background-color: rgb(248, 244, 244);
+ 
+}
+.historicocard{
+  color:black;
+
+  width: 80%;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:#82aaf3;
+
+
+  width: 80%;
+  height: 50%;
+  border-radius: 8px;
+  margin: 0 auto;
+  margin-bottom: 5px;
+}
+
+
+.historico{
+  text-align: center;
+}
+.card{    /*col-5
+  background-color: white;
+  margin:10px;
+  height: 20vh;
+  border-style: solid;
+  border-top-width: 7px;
+  border-color: #00f;
+  border-bottom-width:thin;
+  border-right-width:thin;
+  border-left-width:thin;
+  border-radius: 15px;
+  color: black;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 30px;
+  
+    /*centralizar
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.botao{
+    background-color: #00f;
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    align-self: center;
+    border: none;
+    margin-top: 5px;
+    width: 80%;
+    height: 20%;
+    font-family: 'Poppins';
+}
+
+
+/*
+.continuar{
+text-align: center;
+}
+
+.historicocard{
+color:black;
+background-color:#82aaf3;
+
+width: 80%;
+height: 20vh; 
+margin-top: 20px;
+margin-bottom: 20px;
+margin-left: auto;
+margin-right: 10px;
+border-radius: 15px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+#videocard{
+background-color:#e84141;
+}
+
+.col-5{
+border-style: solid;
+border-top-width: 7px;
+border-color: #00f;
+border-bottom-width:thin;
+border-right-width:thin;
+border-left-width:thin;
+background-color: white;
+border-radius: 15px;
+color: black;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 300;
+font-size: 15px;
+line-height: 30px;
+
+identical to box height
+
+display: flex;
+justify-content: center;
+align-items: center;
+}
+*/

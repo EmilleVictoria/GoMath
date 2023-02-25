@@ -1,0 +1,377 @@
+<DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aulas</title>
+        <script src="/authentication.js"></script>
+        <script src="https://kit.fontawesome.com/79b0962156.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+
+        
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/Dashboard/css/simple-grid.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <link rel="stylesheet" href="/global.css/nav.css">
+        <link rel="stylesheet" href="/global.css/cards.css">
+
+    </head>
+
+    <body>
+
+        <div class="row">
+            <div class="col-2">
+
+                <div class="logo" id="colunas">
+                    <div class="simbolo">
+                        <a style="text-decoration: none;" href="dashboard.html">
+                            <h3><i style="color:black " class="fa-solid fa-cube fa-2x"> </i> GoMath</h3>
+                        </a>
+                    </div>
+
+                    <div class="user">
+                        <a class="usersimbolo" style="text-decoration: none;" href="/usuario/usuario.html">
+                            <i style="color:black" class="fa-solid fa-circle-user fa-2x"> </i>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="menu">
+
+                    <div class="vertical-menu">
+                        <a href="/Dashboard/dashboard.html">
+                            <i style="color:black" class="fa-solid fa-shapes"></i> Dashboard</a>
+                    </div>
+
+                    <div class="vertical-menu">
+                        <a href="/Materiais/Home/materiais.html">
+                            <i style="color:black" class="fa-solid fa-file-import"></i> Materiais</a>
+                    </div>
+
+                    <div class="vertical-menu">
+                        <a href="/Simulado/Home/simulado.html">
+                            <i style="color:black" class="fa-solid fa-book"></i> Simulado</a>
+                    </div>
+
+                    <div class="vertical-menu">
+                        <a href="/Exercicios/Home/exercicios.html">
+                            <i style="color:black" class="fa-solid fa-file"></i> Exercícios</a>
+                    </div>
+
+                    <div class="vertical-menu">
+                        <a href="/Aulas/Home/aulas.html" class="active">
+                            <i style="color:white"class="fa-solid fa-users-rectangle"></i> Aulas</a>
+
+                    </div>
+
+
+                    <div class="vertical-menu">
+                        <a href="/SobreNos/sobreNos.html">
+                            <i style="color:black" class="fa-solid fa-person"></i> Sobre Nós</a>
+                    </div>
+
+
+                    <div class="vertical-menu" id="logout">
+                        <a id="logout" onclick="logout()" class="active">
+                            <i style="color:white" class="fa fa-sign-out"></i> LogOut</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-8">
+
+                <div>
+                    <h2 style="text-align: center;">Assista agora a sua aula :)</h2>
+                </div>
+                <div class="corpo">
+                    <div class="row">
+
+                        <div class="col-4">
+                            <main class="cards">
+                                <section class="card assunto">
+                                    <h3>Algebra I</h3>
+                                    <div class="icon">
+                                        <img src="/assets/bouncy-blackboard-with-equation-glass-with-stationery-and-speech-bubbles-with-question-and-answer.png"
+                                            alt="Contact us.">
+                                    </div>
+                                    <button><a href="/Aulas/Assuntos/Algebra I/algebraI.html" >Assistir</a></button>
+                                </section>
+
+                                <section class="card assunto">
+                                    <h3>Mat. Financeira</h3>
+                                    <div class="icon">
+                                        <img src="/assets/matematica financeira.png" alt="shop">
+                                    </div>
+                                    <button><a href="/Aulas/Assuntos/Matemática Financeira/financeira.html" >Assistir</a></button>
+                                </section>
+
+                                <section class="card assunto">
+                                    <h3>Geometria Plana</h3>
+                                    <div class="icon">
+                                        <img src="/assets/geometria plana.png" alt="Contact us.">
+                                    </div>
+                                    <button><a href="/Aulas/Assuntos/Geometria Plana/geoPlana.html" >Assistir</a></button>
+                                </section>
+
+
+                            </main>
+                        </div>
+                        <!--fim col-3-->
+
+                        <div class="col-4">
+                            <main class="cards">
+
+                                <section class="card assunto">
+                                    <h3>Trigonometria</h3>
+                                    <div class="icon">
+                                        <img src="/assets/trigonometria.png" alt="Contact us.">
+                                    </div>
+                                    <button><a href="/Aulas/Assuntos/Trigonometria/trigonometria.html" >Assistir</a></button>
+                                </section>
+
+                                <section class="card assunto">
+                                    <h3>Algebra II</h3>
+                                    <div class="icon">
+                                        <img src="/assets/algebra II.png" alt="shop">
+                                    </div>
+                                    <button><a href="/Aulas/Assuntos/Algebra II/algebra2.html" >Assistir</a></button>
+                                </section>
+
+                                <section class="card assunto">
+                                    <h3>Estatística</h3>
+                                    <div class="icon">
+                                        <img src="/assets/estatistica.png" alt="Contact us.">
+                                    </div>
+                                    <button><a href="/Aulas/Assuntos/Estatistica/estatistica.html" >Assistir</a></button>
+                                </section>
+
+
+                            </main>
+                        </div>
+                        <!--Fim col-3-->
+                        <div class="col-4">
+                            <main class="cards">
+                                <section class="card assunto">
+                                    <h3>Geometria Espacial</h3>
+                                    <div class="icon">
+                                        <img src="/assets/geometria.png"
+                                            alt="Contact us.">
+                                    </div>
+                                    <button><a href="/Aulas/Assuntos/Geometria Espacial/geometriaespacial.html" >Assistir</a></button>
+                                </section>
+
+                                <section class="card assunto">
+                                    <h3>Geometria Analítica</h3>
+                                    <div class="icon">
+                                        <img src="/assets/geometria analitica.png" alt="shop">
+                                    </div>
+                                    <button><a href="/Aulas/Assuntos/Geometria Analitica/geometrianalitica.html" >Assistir</a></button>
+                                </section>
+
+                                <section class="card assunto">
+                                    <h3>Algebra III</h3>
+                                    <div class="icon">
+                                        <img src="/assets/algebraIII.png" alt="Contact us.">
+                                    </div>
+                                    <button><a href="/Aulas/Assuntos/Algebra III/algebraIII.html" >Assistir</a></button>
+                                </section>
+
+
+                            </main>
+                        </div>
+
+                    </div>
+                </div>
+            </div> <!--col-8-->
+            <div class="col-2">
+                <div>
+                    <h3 class="desempenho">Desempenho</h3>
+                </div>
+
+
+
+            </div>
+        </div>
+        </div>
+
+
+
+
+
+    </body>
+    <script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-auth-compat.js"></script>
+    <script src="/config.js"></script>
+
+    </html>
+
+
+
+    <!--
+
+                <div><h1 class="bemvindo">Materiais</h1></div>
+                <div><p>Barra de pesquisa(em andamento...)</p></div>
+                    
+                <div class="historico">
+                    <div class="row">
+                        Coluna 1
+                        <div class="col-4">
+                            Material
+                            <div class="card">Quatro operações
+                                <div class="historicocard">
+                                <div>
+                                    <a type="button" href="#">
+                                        <i style="color:white"class="fas fa-calculator	fa-2x"></i>
+                                    </a>
+                                </div>
+                                </div>
+                                <div>
+                                    <a type="button" href="#">
+                                        <i style="color: black"class="fas fa-download fa-2x"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            Material
+                            <div class="card">Quatro operações
+                                <div class="historicocard">
+                                <div>
+                                    <a type="button" href="#">
+                                        <i style="color:white"class="fas fa-calculator	fa-2x"></i>
+                                    </a>
+                                </div>
+                                </div>
+                                <div>
+                                    <a type="button" href="#">
+                                        <i style="color: black"class="fas fa-download fa-2x"></i>
+                                    </a>
+                                </div>
+                            </div>                       
+                            Material
+                            <div class="card">Quatro operações
+                                <div class="historicocard">
+                                <div>
+                                    <a type="button" href="#">
+                                        <i style="color:white"class="fas fa-calculator	fa-2x"></i>
+                                    </a>
+                                </div>
+                                </div>
+                                <div>
+                                    <a type="button" href="#">
+                                        <i style="color: black"class="fas fa-download fa-2x"></i>
+                                    </a>
+                                </div>
+                            </div>                          
+                        </div>
+                        Fim coluna 1
+
+                        Coluna 2
+                        <div class="col-4">
+                        Material
+                        <div class="card">Quatro operações
+                            <div class="historicocard">
+                            <div>
+                                <a type="button" href="#">
+                                    <i style="color:white"class="fas fa-calculator	fa-2x"></i>
+                                </a>
+                            </div>
+                            </div>
+                            <div>
+                                <a type="button" href="#">
+                                    <i style="color: black"class="fas fa-download fa-2x"></i>
+                                </a>
+                            </div>
+                        </div>   
+                        
+                        Material
+                        <div class="card">Quatro operações
+                            <div class="historicocard">
+                            <div>
+                                <a type="button" href="#">
+                                    <i style="color:white"class="fas fa-calculator	fa-2x"></i>
+                                </a>
+                            </div>
+                            </div>
+                            <div>
+                                <a type="button" href="#">
+                                    <i style="color: black"class="fas fa-download fa-2x"></i>
+                                </a>
+                            </div>
+                        </div>   
+
+                        Material
+                        <div class="card">Quatro operações
+                            <div class="historicocard">
+                            <div>
+                                <a type="button" href="#">
+                                    <i style="color:white"class="fas fa-calculator	fa-2x"></i>
+                                </a>
+                            </div>
+                            </div>
+                            <div>
+                                <a type="button" href="#">
+                                    <i style="color: black"class="fas fa-download fa-2x"></i>
+                                </a>
+                            </div>
+                        </div>   
+                        </div>
+                        Fim coluna 2
+
+                       Coluna 3
+                        <div class="col-4">
+                            Material
+                            <div class="card">Quatro operações
+                                <div class="historicocard">
+                                <div>
+                                    <a type="button" href="#">
+                                        <i style="color:white"class="fas fa-calculator	fa-2x"></i>
+                                    </a>
+                                </div>
+                                </div>
+                                <div>
+                                    <a type="button" href="#">
+                                        <i style="color: black"class="fas fa-download fa-2x"></i>
+                                    </a>
+                                </div>
+                        </div>
+                        
+                           Material
+                            <div class="card">Quatro operações
+                                <div class="historicocard">
+                                <div>
+                                    <a type="button" href="#">
+                                        <i style="color:white"class="fas fa-calculator	fa-2x"></i>
+                                    </a>
+                                </div>
+                                </div>
+                                <div>
+                                    <a type="button" href="#">
+                                        <i style="color: black"class="fas fa-download fa-2x"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            Material
+                            <div class="card">Quatro operações
+                                <div class="historicocard">
+                                <div>
+                                    <a type="button" href="#">
+                                        <i style="color:white"class="fas fa-calculator	fa-2x"></i>
+                                    </a>
+                                </div>
+                                </div>
+                                <div>
+                                    <a type="button" href="#">
+                                        <i style="color: black"class="fas fa-download fa-2x"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                        Fim coluna 3
+                    </div>
+                    -->
