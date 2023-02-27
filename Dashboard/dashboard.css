@@ -131,3 +131,14 @@ border-radius: 15px;
 #videocard{
   background-color:#E56F8C;
 }
+.cardDesempenho{
+  background-color: #3649f9;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  color: white;
+}
+p{
+  color: white;
+}
+

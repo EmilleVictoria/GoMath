@@ -9,6 +9,7 @@
 
    <script src="/authentication.js"></script>
    <script src="https://kit.fontawesome.com/79b0962156.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="dashboard.css">
     <link rel="stylesheet" href="css/dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/Dashboard/css/simple-grid.min.css">
@@ -79,7 +80,7 @@
             <div class="col-8">
                 <!--video-->
                 <div><h1 class="bemvindo">Bem vindo, fulano.</h1></div>
-                <div><p class="dia">Tenha um ótimo dia!</p></div>
+                <div><p class="dia" style="color:black;">Tenha um ótimo dia!</p></div>
                 <div class="video">
                     <iframe width="70%" height="300" src="https://www.youtube.com/embed/Li9fUNibVlw?autoplay=1&mute=1" title="SEJA BEM VINDO EFEITO LINHAS BACKGROUND FULL HD #Mczprints 🇧🇷" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
@@ -94,14 +95,14 @@
                     <div class="row">
                         <div class="col-1 ultimoSimu"></div>
                         <div class="col-5 continuar">
-                            <p>Continuar assistindo...</p>
+                            <p style="color:black;">Continuar assistindo...</p>
                             <div class="historicocard" id="videocard">
                                 <a type="button" href="#">
                                     <i style="color:white"class="fa-solid fa-play fa-3x"></i>
                                 </a>
                             </div>
                         </div>
-                        <div class="col-5 ultimoSimu"><p>Ultimo simulado.</p>
+                        <div class="col-5 ultimoSimu"><p style="color:black;">Ultimo simulado.</p>
                             <div class="historicocard">
 
                                 <div>
@@ -122,9 +123,25 @@
             </div>
             <div class="col-2">
                 <div><h3 class="desempenho">Desempenho</h3></div>
-               
 
-                
+                <p style="color:black; text-align: center; width: 100%;">Quantidade de assuntos gerais estudados.</p>
+
+                <div class="cardDesempenho">
+                    <p>A partir de resumos</p>
+                    <p>(Quantidade)</p>
+                </div>
+
+                    
+                <div class="cardDesempenho">
+                    <p>A partir de listas baixadas</p>
+                    <p>(Quantidade)</p>
+                    
+                </div>
+
+                <div class="cardDesempenho">
+                    <p>A partir das video aulas</p>
+                    <p>(Quantidade)</p>
+                </div>
             </div>
         </div>
    
