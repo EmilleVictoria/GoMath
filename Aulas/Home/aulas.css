@@ -12,15 +12,23 @@
     border-bottom-width:3px;
     border-right-width:3px;
     border-left-width:3px;
-    width: 70px;
+    width: 20%;
+    height: 20%;
+    margin: 0;
+    background-color: #3649f9;
+    color: white;
     margin: auto;
     display: block;
 
 }
+p{
+    color: white;
+    margin: 0;
+}
 input[type=checkbox]{
     content: "";
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     background-color:#1E80EF;
     cursor: pointer;
         
