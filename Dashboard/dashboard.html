@@ -7,8 +7,11 @@
     <title>Dashboard</title>
     <script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
     <script src="/config.js"></script>
-    <script src="/authentication.js"></script>
+    <script src="/authentication.js" ></script>
+    
+    
    <script src="https://kit.fontawesome.com/79b0962156.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="dashboard.css">
     <link rel="stylesheet" href="css/dashboard.css">
@@ -80,8 +83,61 @@
             </div>
             <div class="col-8">
                 <!--video-->
-                <div><h1 class="bemvindo">Bem vindo, fulano.</h1></div>
-                <div><p class="dia" style="color:black;">Tenha um ótimo dia!</p></div>
+                <div>
+                    <h4 class="bemvindo">Boas vindas,</h4>
+                    <h4 class="bemvindo" id="Bem-Vindo"></h4></div>
+                    <script>
+                        var nome;
+                            
+                        function listener (){
+                            firebase.auth().onAuthStateChanged(function(user) {
+                                if (user) {
+                                // User is signed in.
+                                var userId = firebase.auth().currentUser;
+                                var email = userId.email;
+                                var nome = userId.displayName;
+                                var id = userId.uid;
+                                document.getElementById("Bem-Vindo").innerHTML = nome;
+                                                                 
+                                } else {
+                                console.log("Faça Login")
+                                }
+                        });}
+
+                        listener();
+                        
+
+                        
+
+    
+
+
+
+                    </script>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 <div class="video">
                     <iframe width="70%" height="300" src="https://www.youtube.com/embed/Li9fUNibVlw?autoplay=1&mute=1" title="SEJA BEM VINDO EFEITO LINHAS BACKGROUND FULL HD #Mczprints 🇧🇷" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
