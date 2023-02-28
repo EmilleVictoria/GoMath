@@ -96,8 +96,14 @@
                         <p>Email</p>
                         <p id="email"></p>
 
+                        <p>Downloads de exercicios</p>
+                        <p id="dexercicios"></p>
+                        
+                        <p>Downloads de materiais</p>
+                        <p id="dmateriais"></p>
+
                         <script>
-                            var email, nome; 
+                            var email, nome, id; 
                                 
                             function listener (){
                                 firebase.auth().onAuthStateChanged(function(user) {
@@ -106,8 +112,12 @@
                                     var userId = firebase.auth().currentUser;
                                     var email = userId.email;
                                     var nome = userId.displayName;
+                                    var id = userId.uid;
                                     document.getElementById("demo").innerHTML = nome;
+                                    getExercicios(id);
+                                    getMateriais(id);
                                     
+                                  
                                     document.getElementById("email").innerHTML = email;
                                     console.log(email+"olha ai")                                    
                                     } else {
@@ -116,8 +126,61 @@
                             });}
 
                             listener();
-                        
                             
+        
+                            
+        
+        var qNum;
+        function getExercicios(id) {
+    //Gets all the questions from firebase and save them in questions object
+    firebase
+    .database()
+      .ref('users/' + id +"/exercicios")
+      .once("value", function (data) {
+        //once means,run  questions function only once. value refers to => Run  questions function when the value is updated. data=>received data from database
+        var data = data.val();
+        qNum = 0;
+        for (var property in data) {
+          //run   questions loop as long as the data has some property
+          if (data.hasOwnProperty(property)) {
+            
+            
+  
+            qNum++;
+          }
+        }
+        document.getElementById("dexercicios").innerHTML = qNum;
+        return qNum;
+        
+      })}
+
+      var qNumMateriais;
+
+      function getMateriais(id) {
+    //Gets all the questions from firebase and save them in questions object
+    firebase
+    .database()
+      .ref('users/' + id +"/materiais")
+      .once("value", function (data) {
+        //once means,run  questions function only once. value refers to => Run  questions function when the value is updated. data=>received data from database
+        var data = data.val();
+        qNumMateriais = 0;
+        for (var property in data) {
+          //run   questions loop as long as the data has some property
+          if (data.hasOwnProperty(property)) {
+            
+            
+  
+            qNumMateriais++;
+          }
+        }
+        document.getElementById("dmateriais").innerHTML = qNumMateriais;
+        return qNumMateriais;
+        
+      })}
+
+      
+    
                         </script>  
                          
                     
