@@ -6,7 +6,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Algebra I</title>
-        <script src="/authentication.js"></script>
+        
+        <script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-auth-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+        <script src="/config.js"></script>
+        <script src="/authentication.js" ></script>
+
         <script src="https://kit.fontawesome.com/79b0962156.js" crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 
@@ -99,7 +105,7 @@
                                         <img src="/assets/conjuntos_novo.png" alt="Contact us.">
                                     </div>
                                     <div>
-                                        <button>
+                                        <button onclick="marcarConcluido(1)">
                                         <a type="button" href="/Exercicios/Exercicios/Conjuntos.pdf" download="Lista-Conjuntos" type="application/pdf">
                                             <i style="color:white"class="fas fa-download fa-2x"></i>
                                         </a>
@@ -113,7 +119,7 @@
                                         <img src="/assets/funcaonovo.png" alt="shop">
                                     </div>
                                     <div>
-                                        <button>
+                                        <button onclick="marcarConcluido(2)">
                                             <a type="button" href="/Exercicios/Exercicios/Funcoes.pdf" download="Lista-Funcoes" type="application/pdf">
                                                 <i style="color:white"class="fas fa-download fa-2x"></i>
                                             </a>
@@ -127,7 +133,7 @@
                                         <img src="/assets/funcaoafimnovo.png" alt="Contact us.">
                                     </div>
                                     <div>
-                                        <button>
+                                        <button onclick="marcarConcluido(3)">
                                             <a type="button" href="/Exercicios/Exercicios/FunçãoAfim.pdf" download="Lista-FuncaoAfim" type="application/pdf">
                                                 <i style="color:white"class="fas fa-download fa-2x"></i>
                                             </a>
@@ -149,7 +155,7 @@
                                         <img src="/assets/funcaoexponencialnovo.png" alt="Contact us.">
                                     </div>
                                     <div>
-                                        <button>
+                                        <button onclick="marcarConcluido(4)">
                                             <a type="button" href="/Exercicios/Exercicios/FuncaoExponencial.pdf" download="Lista-FuncaoExponencial" type="application/pdf">
                                                 <i style="color:white"class="fas fa-download fa-2x"></i>
                                             </a>
@@ -163,7 +169,7 @@
                                         <img src="/assets/funcaomodular.png" alt="shop">
                                     </div>
                                     <div>
-                                        <button>
+                                        <button onclick="marcarConcluido(5)">
                                             <a type="button" href="/Exercicios/Exercicios/FuncaoModular.pdf" download="Lista-FuncaoModular" type="application/pdf">
                                                 <i style="color:white"class="fas fa-download fa-2x"></i>
                                             </a>
@@ -186,7 +192,7 @@
                                             alt="Contact us.">
                                     </div>
                                     <div>
-                                        <button>
+                                        <button onclick="marcarConcluido(6)">
                                             <a type="button" href="/Exercicios/Exercicios/FuncaoLogaritmica.pdf" download="Lista-FuncaoLogaritmica" type="application/pdf">
                                                 <i style="color:white"class="fas fa-download fa-2x"></i>
                                             </a>
@@ -200,7 +206,7 @@
                                         <img src="/assets/funcaoquadraticanovo.png" alt="Contact us.">
                                     </div>
                                     <div>
-                                        <button>
+                                        <button onclick="marcarConcluido(7)">
                                             <a type="button" href="/Exercicios/Exercicios/FunçãoQuadratica.pdf" download="Lista-FuncaoQuadratica" type="application/pdf">
                                                 <i style="color:white"class="fas fa-download fa-2x"></i>
                                             </a>
@@ -219,7 +225,60 @@
                     <h3 class="desempenho">Desempenho</h3>
                 </div>
 
+<script>
+                    
+                    function listener (){
+                        firebase.auth().onAuthStateChanged(function(user) {
+                            if (user) {
+                            // User is signed in.
+                            var userId = firebase.auth().currentUser;
+                            var uid = userId.uid;
+                            
+                            
+                            
+                            
+                            console.log(uid+"olha ai")  
+                            return uid;                                  
+                            } else {
+                            console.log("Faça Login")
+                            }
+                    });}
 
+                    listener();
+                
+                    function marcarConcluido (numero){
+                    if (firebase.database().ref('users/' + firebase.auth().currentUser.uid+"/exercicios")==undefined){
+                        firebase.database().ref('users/' + firebase.auth().currentUser.uid+"/exercicios").set(0)
+                    }
+                        var info;
+                        if (numero==1){
+                            info = { conjuntos : true}
+                        }else if (numero==2){
+                            info = { funcoes : true}
+                            
+                        }else if (numero==3){
+                            info = { fAfim : true}
+                            
+                        }else if (numero==4){
+                            info = { fExponencial : true}
+                           
+                        }else if (numero==5){
+                            info = { fModular : true}
+                            
+                        }else if (numero==6){
+                            info = { fLogaritima : true}
+                            
+                        }else if (numero==7){
+                            info = { fQuadratica : true}
+                           
+                        }
+                         firebase.database().ref('users/' + firebase.auth().currentUser.uid+"/exercicios").push(info)
+                         
+                    }
+                   
+                    
+                    
+                </script>
 
             </div>
         </div>
@@ -230,7 +289,5 @@
 
 
     </body>
-    <script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-auth-compat.js"></script>
-    <script src="/config.js"></script>
+    
     </html>
