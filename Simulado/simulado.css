@@ -82,6 +82,8 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 40px;
+  color: white;
+  font-size: 25px;
 }
 .finish button {
   background-color: #00a8cc;
@@ -94,6 +96,7 @@ body {
   transition: background-color 0.3s;
   margin-top: 10px;
   
+  
      
 }
 .finish button:hover {
@@ -102,7 +105,7 @@ body {
 
 .textfinish{
  color: white;
-  font-size: 20px;
+  font-size: 30px;
   width: 250px;
   height: 80px;
   text-align: center;
@@ -112,7 +115,7 @@ body {
 }
 
 /* media query para telas menores */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 4000px) {
   .box {
     width: 90%;
     max-width: none;
