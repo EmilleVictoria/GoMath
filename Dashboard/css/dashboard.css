@@ -2,9 +2,9 @@
 /*Coluna 2 (col-8) - "meio" */
 
 /*Video*/
+
   .col-8{
-    background-color: rgb(248, 244, 244);
-  }
+    background: #F6F9FF;  }
 
  .bemvindo{
     margin-top: 10px;

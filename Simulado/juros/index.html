@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Juros</title>
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/Simulado/simulado.css">
 
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-app-compat.js"></script>
@@ -21,12 +21,18 @@
 
 </head>
 <body>
-
-  <h2>Juros-Simulado</h2>
+  <div class="content">
   <main>
-    <div class="content">
-      
+    <div class="box">
+    
+    <div class="tituloSimulado">
+    <h2>Juros - Simulado</h2>
+    <div class="tempo">
       <div id="timer"></div>
+    </div>
+    </div>
+  
+      
       <!-- Aquele contador que mostra o indice da questao (1 em diante)-->
       <span class="spnQtd"></span>
       
@@ -36,13 +42,18 @@
       
       <!-- Alternativas-->
       <div class="answers"></div>
-      
     </div>
-    <div class="finish">
-         <!-- Serve so para agrupar os elementos para que fique mais facil de estilizar-->
-        <span></span>
-      <button>Reiniciar</button>
     </div>
+
+
+  <div class="finish">
+    <!-- Serve so para agrupar os elementos para que fique mais facil de estilizar-->
+    <div class="textfinish">
+    <span></span>
+    <button>Iniciar</button>
+    </div>
+  
+  </div>
   </main>
   
   <!-- Está modular pq dentro dele se importa questions.js-->

@@ -179,6 +179,7 @@ function finish() {
   contentFinish.style.display = "flex";
   firebase.database().ref('users/' + firebase.auth().currentUser.uid+"/erradas").set(erradas)
   firebase.database().ref('users/' + firebase.auth().currentUser.uid+"/certas").set(certas)
+
 }
 
 
